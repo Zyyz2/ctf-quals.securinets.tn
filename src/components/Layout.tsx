@@ -3,7 +3,6 @@ import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import ThemeToggle from "@/components/ThemeToggle";
-import IntroSplash from "@/components/IntroSplash";
 import { DiscordIcon, XIcon } from "@/components/icons";
 import { ArrowUp, BarChart3, CalendarDays, ChevronRight, Facebook, Home, Images, Instagram, Linkedin, LayoutGrid, Mail, Menu, Trophy, Users } from "lucide-react";
 
@@ -64,8 +63,6 @@ const Layout = () => {
 
   return (
     <div className="min-h-screen bg-background/60 text-foreground">
-      <IntroSplash />
-
       {/* ===== Desktop sidebar ===== */}
       <aside className="fixed inset-y-0 left-0 z-50 hidden w-60 flex-col border-r border-border bg-background lg:flex">
         {/* Brand */}
