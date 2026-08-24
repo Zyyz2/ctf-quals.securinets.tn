@@ -66,7 +66,10 @@ const MEMBERS = [
     name: "Mohamed Gharbi",
     role: "Reverse Engineering",
     discord: "OTC",
-    links: [],
+    links: [
+      { href: "https://www.linkedin.com/in/mohamed-gharbi-a4196b325", label: "LinkedIn", icon: Linkedin },
+      { href: "https://github.com/hamagharbi", label: "GitHub", icon: Github },
+    ],
   },
   {
     photo: team6,
