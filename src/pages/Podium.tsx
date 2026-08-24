@@ -7,7 +7,7 @@ import { Trophy } from "lucide-react";
 
 const PODIUM = [
   { place: "2", label: "2nd place", name: "Pwnsec", img: podium2, order: "order-2 sm:order-1", drop: "sm:translate-y-14" },
-  { place: "1", label: "1st place", name: "AresX", img: podium1, order: "order-1 sm:order-2", drop: "" },
+  { place: "1", label: "1st place", name: "ARESx", img: podium1, order: "order-1 sm:order-2", drop: "" },
   { place: "3", label: "3rd place", name: "Project Sekai", img: podium3, order: "order-3", drop: "sm:translate-y-24" },
 ];
 
