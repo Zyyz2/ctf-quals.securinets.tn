@@ -152,7 +152,10 @@ const MEMBERS = [
     name: "Mohamed Ali Ouachani",
     role: "Mobile",
     discord: "Ir0nbyte",
-    links: [{ href: "https://www.youtube.com/@ir0nbyte", label: "YouTube", icon: Youtube }],
+    links: [
+      { href: "https://www.youtube.com/@ir0nbyte", label: "YouTube", icon: Youtube },
+      { href: "https://www.linkedin.com/in/med-ali-wachani/", label: "LinkedIn", icon: Linkedin },
+    ],
   },
 ];
 
