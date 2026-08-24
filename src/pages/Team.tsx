@@ -15,7 +15,7 @@ import team14 from "@/assets/ouachani.webp";
 import team15 from "@/assets/graba.webp";
 
 import Reveal from "@/components/Reveal";
-import { Globe, Github, Linkedin } from "lucide-react";
+import { Globe, Github, Linkedin, Youtube } from "lucide-react";
 import { XIcon, DiscordIcon } from "@/components/icons";
 
 const MEMBERS = [
@@ -146,7 +146,7 @@ const MEMBERS = [
     name: "Mohamed Ali Ouachani",
     role: "Mobile",
     discord: "Ir0nbyte",
-    links: [],
+    links: [{ href: "https://www.youtube.com/@ir0nbyte", label: "YouTube", icon: Youtube }],
   },
 ];
 
