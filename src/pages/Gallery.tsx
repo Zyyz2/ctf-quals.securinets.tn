@@ -44,25 +44,32 @@ const Reveal = ({ children, delay, fromTop }: { children: React.ReactNode; delay
 
   useEffect(() => {
     const el = ref.current;
-    if (!el) return;
+    if (!el || typeof IntersectionObserver === "undefined") {
+      setVisible(true);
+      return;
+    }
     const io = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting || entry.boundingClientRect.top < window.innerHeight) {
           setVisible(true);
           io.disconnect();
         }
       },
-      { threshold: 0.15 }
+      { threshold: 0, rootMargin: "0px 0px -5% 0px" }
     );
     io.observe(el);
-    return () => io.disconnect();
+    const failsafe = window.setTimeout(() => setVisible(true), 2500);
+    return () => {
+      io.disconnect();
+      window.clearTimeout(failsafe);
+    };
   }, []);
 
   return (
     <div
       ref={ref}
       style={{ transitionDelay: `${delay}ms` }}
-      className={`transition-[clip-path] duration-1000 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+      className={`break-inside-avoid transition-[clip-path] duration-1000 ease-[cubic-bezier(0.22,1,0.36,1)] ${
         visible
           ? "[clip-path:inset(0_0_0_0)]"
           : fromTop
@@ -114,7 +121,7 @@ const Tile = ({ src, onOpen }: { src: string; onOpen: () => void }) => {
           transform: `scale(1.1) translate(${-tilt.ry * 1.6}px, ${tilt.rx * 1.6}px)`,
           transition: idle ? `transform 800ms ${EASE}` : "transform 120ms linear",
         }}
-        className="max-h-[560px] w-full object-cover will-change-transform"
+        className="min-h-[220px] max-h-[560px] w-full bg-muted object-cover will-change-transform"
       />
       <span className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/0 to-background/0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
       <span className="absolute bottom-3 right-3 grid h-9 w-9 place-items-center rounded-full bg-primary text-primary-foreground shadow-glow opacity-0 scale-75 transition-all duration-300 group-hover:opacity-100 group-hover:scale-100">
