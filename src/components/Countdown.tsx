@@ -75,18 +75,19 @@ const Countdown = ({
 
       {phase === 'upcoming' ? (
         <>
-          <div className="mt-5 flex items-center justify-center gap-4 md:gap-7">
+          <div className="mt-5 flex items-center justify-center gap-3 md:gap-7">
             {timeUnits.map((unit, i) => (
               <Fragment key={unit.label}>
                 {i > 0 && <span aria-hidden className="h-9 w-px bg-border md:h-14" />}
-                <div className="text-center">
+                <div className="w-14 md:w-24 text-center">
                   <div
-                    key={unit.value}
-                    className={`animate-tick font-display font-bold tabular-nums leading-none tracking-tight text-5xl md:text-7xl ${
+                    className={`font-display font-bold tabular-nums leading-none tracking-tight text-4xl sm:text-5xl md:text-7xl ${
                       unit.label === 'Sec' ? 'text-primary' : ''
                     }`}
                   >
-                    {unit.value.toString().padStart(2, '0')}
+                    <span key={unit.value} className="inline-block animate-tick">
+                      {unit.value.toString().padStart(2, '0')}
+                    </span>
                   </div>
                   <div className="mt-3 text-[10px] uppercase tracking-[0.35em] text-muted-foreground">{unit.label}</div>
                 </div>
