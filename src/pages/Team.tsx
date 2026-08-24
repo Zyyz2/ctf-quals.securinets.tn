@@ -132,7 +132,10 @@ const MEMBERS = [
     name: "Malek Tabbabi",
     role: "Cryptography",
     discord: "Bitraven",
-    links: [],
+    links: [
+      { href: "https://cs.bit-raven.com", label: "blog", icon: Globe },
+      { href: "https://www.linkedin.com/in/malek-tababi-5a9511318", label: "LinkedIn", icon: Linkedin },
+    ],
   },
   {
     photo: null,
