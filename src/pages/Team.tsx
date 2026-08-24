@@ -12,6 +12,7 @@ import team9 from "@/assets/limam.webp";
 import team10 from "@/assets/charfeddine.webp";
 import team13 from "@/assets/malek-tabbabi.webp";
 import team14 from "@/assets/ouachani.webp";
+import team15 from "@/assets/graba.webp";
 
 import Reveal from "@/components/Reveal";
 import { Globe, Github, Linkedin } from "lucide-react";
@@ -85,7 +86,7 @@ const MEMBERS = [
     ],
   },
   {
-    photo: null,
+    photo: team15,
     name: "Hedi Graba",
     role: "Web Exploitation",
     discord: "Ghr4b",
