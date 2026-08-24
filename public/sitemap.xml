@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  
+  <!-- Main Page -->
+  <url>
+    <loc>https://ctf.securinets.tn/</loc>
+    <lastmod>2025-01-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://media.securinets.tn/cover.jpg</image:loc>
+      <image:title>Securinets CTF Quals 2025</image:title>
+      <image:caption>Global cybersecurity competition featuring diverse challenge categories</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://media.securinets.tn/logo.svg</image:loc>
+      <image:title>Securinets INSAT Logo</image:title>
+      <image:caption>Official logo of Securinets INSAT cybersecurity organization</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Section Anchors for better internal linking -->
+  <url>
+    <loc>https://ctf.securinets.tn/#about</loc>
+    <lastmod>2025-01-01T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://ctf.securinets.tn/#schedule</loc>
+    <lastmod>2025-01-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://ctf.securinets.tn/#tracks</loc>
+    <lastmod>2025-01-01T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://ctf.securinets.tn/#team</loc>
+    <lastmod>2025-01-01T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://ctf.securinets.tn/#gallery</loc>
+    <lastmod>2025-01-01T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://ctf.securinets.tn/#contact</loc>
+    <lastmod>2025-01-01T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>

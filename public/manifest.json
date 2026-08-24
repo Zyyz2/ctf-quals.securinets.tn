@@ -1,0 +1,28 @@
+{
+  "name": "Securinets CTF Quals 2026",
+  "short_name": "Securinets CTF",
+  "description": "Global cybersecurity competition featuring diverse challenge categories including web exploitation, pwn, reverse engineering, cryptography, forensics, and OSINT",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#e80032",
+  "orientation": "portrait-primary",
+  "categories": ["education", "security", "technology"],
+  "lang": "en",
+  "dir": "ltr",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "https://media.securinets.tn/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://media.securinets.tn/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
