@@ -44,6 +44,7 @@ const SOCIALS = [
 
 const Layout = () => {
   const [showTop, setShowTop] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
   const { pathname } = useLocation();
 
   useEffect(() => {
@@ -133,23 +134,21 @@ const Layout = () => {
           </Link>
           <div className="flex items-center gap-2">
             <ThemeToggle />
-            <Sheet>
+            <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
               <SheetTrigger asChild>
                 <Button size="icon" variant="outline" aria-label="Open menu">
                   <Menu className="h-5 w-5" />
                 </Button>
               </SheetTrigger>
               <SheetContent side="left" className="w-80 sm:w-96">
-                <div className="flex items-center justify-between">
-                  <span className="font-display text-lg font-semibold">Menu</span>
-                  <ThemeToggle />
-                </div>
+                <span className="font-display text-lg font-semibold">Menu</span>
                 <nav className="mt-6 grid gap-1">
                   {NAV.map((item) => (
                     <NavLink
                       key={item.to}
                       to={item.to}
                       end={item.to === "/"}
+                      onClick={() => setMobileOpen(false)}
                       className={({ isActive }) =>
                         `flex items-center gap-3 rounded-lg px-3 py-2.5 text-base font-medium transition-colors ${
                           isActive ? "bg-primary/10 text-primary" : "text-muted-foreground hover:bg-muted hover:text-foreground"
@@ -162,7 +161,7 @@ const Layout = () => {
                   ))}
                 </nav>
                 <div className="mt-6">
-                  <Button asChild variant="discord" className="w-full">
+                  <Button asChild variant="discord" className="w-full" onClick={() => setMobileOpen(false)}>
                     <a href={discordInvite} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
                       <DiscordIcon className="h-4 w-4" />
                       Join our Discord
