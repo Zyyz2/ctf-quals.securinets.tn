@@ -15,6 +15,8 @@ import gallery10 from "@/assets/gallery-10.jpg";
 import gallery11 from "@/assets/gallery-11.jpg";
 import gallery12 from "@/assets/gallery-12.jpg";
 import gallery13 from "@/assets/gallery-13.jpg";
+import gallery14 from "@/assets/gallery-14.jpg";
+import gallery15 from "@/assets/gallery-15.jpg";
 
 const PHOTOS = [
   // Red / neutral interleaved
@@ -31,6 +33,8 @@ const PHOTOS = [
   gallery10,
   gallery05,
   gallery01,
+  gallery14,
+  gallery15,
 ];
 
 const CAPTION = "Securinets CTF 2025 Finals";
