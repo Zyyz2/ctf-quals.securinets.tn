@@ -18,6 +18,7 @@ const NAV = [
   { to: "/gallery", label: "Gallery", icon: Images },
   { to: "/team", label: "Team", icon: Users },
   { to: "/contact", label: "Contact", icon: Mail },
+  { href: "https://ctf.securinets.tn", label: "CTFd Platform", icon: Trophy },
 ];
 
 const SOCIALS = [
@@ -77,32 +78,55 @@ const Layout = () => {
         {/* Nav */}
         <div className="relative mt-10 flex-1 px-3">
           <nav className="grid">
-            {NAV.map((item, i) => (
-              <NavLink
-                key={item.to}
-                to={item.to}
-                end={item.to === "/"}
-                data-nav-idx={i}
-                className={({ isActive }) => `${navLinkClass({ isActive })} animate-fade-in`}
-                style={{ animationDelay: `${i * 60}ms`, animationFillMode: "backwards" }}
-              >
-                {({ isActive }: { isActive: boolean }) => (
-                  <>
-                    <item.icon
-                      className={`h-4 w-4 shrink-0 transition-colors duration-300 ${
-                        isActive ? "text-primary" : "group-hover:text-foreground"
-                      }`}
-                    />
+            {NAV.map((item, i) => {
+              const baseClass = `group relative flex items-center gap-3 rounded-lg px-4 py-2.5 text-sm font-medium transition-colors duration-200 text-muted-foreground hover:text-foreground animate-fade-in`;
+              const style = { animationDelay: `${i * 60}ms`, animationFillMode: "backwards" as const };
+
+              if ("href" in item) {
+                return (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-nav-idx={i}
+                    className={baseClass}
+                    style={style}
+                  >
+                    <item.icon className="h-4 w-4 shrink-0 transition-colors duration-300 group-hover:text-foreground" />
                     <span>{item.label}</span>
-                    <ChevronRight
-                      className={`ml-auto h-4 w-4 shrink-0 -translate-x-1 text-primary opacity-0 transition-all duration-300 ${
-                        isActive ? "translate-x-0 opacity-100" : ""
-                      }`}
-                    />
-                  </>
-                )}
-              </NavLink>
-            ))}
+                    <span className="ml-auto rounded-md bg-primary/10 px-1.5 py-0.5 text-[10px] font-semibold text-primary">LIVE</span>
+                  </a>
+                );
+              }
+
+              return (
+                <NavLink
+                  key={item.to}
+                  to={item.to}
+                  end={item.to === "/"}
+                  data-nav-idx={i}
+                  className={({ isActive }) => `${navLinkClass({ isActive })} animate-fade-in`}
+                  style={style}
+                >
+                  {({ isActive }: { isActive: boolean }) => (
+                    <>
+                      <item.icon
+                        className={`h-4 w-4 shrink-0 transition-colors duration-300 ${
+                          isActive ? "text-primary" : "group-hover:text-foreground"
+                        }`}
+                      />
+                      <span>{item.label}</span>
+                      <ChevronRight
+                        className={`ml-auto h-4 w-4 shrink-0 -translate-x-1 text-primary opacity-0 transition-all duration-300 ${
+                          isActive ? "translate-x-0 opacity-100" : ""
+                        }`}
+                      />
+                    </>
+                  )}
+                </NavLink>
+              );
+            })}
           </nav>
         </div>
 
@@ -140,22 +164,40 @@ const Layout = () => {
               <SheetContent side="left" className="w-80 sm:w-96">
                 <span className="font-display text-lg font-semibold">Menu</span>
                 <nav className="mt-6 grid gap-1">
-                  {NAV.map((item) => (
-                    <NavLink
-                      key={item.to}
-                      to={item.to}
-                      end={item.to === "/"}
-                      onClick={() => setMobileOpen(false)}
-                      className={({ isActive }) =>
-                        `flex items-center gap-3 rounded-lg px-3 py-2.5 text-base font-medium transition-colors ${
-                          isActive ? "bg-primary/10 text-primary" : "text-muted-foreground hover:bg-muted hover:text-foreground"
-                        }`
-                      }
-                    >
-                      <item.icon className="h-5 w-5" />
-                      {item.label}
-                    </NavLink>
-                  ))}
+                  {NAV.map((item) => {
+                    if ("href" in item) {
+                      return (
+                        <a
+                          key={item.href}
+                          href={item.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={() => setMobileOpen(false)}
+                          className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-base font-medium transition-colors text-muted-foreground hover:bg-muted hover:text-foreground"
+                        >
+                          <item.icon className="h-5 w-5" />
+                          {item.label}
+                          <span className="ml-auto rounded-md bg-primary/10 px-1.5 py-0.5 text-[10px] font-semibold text-primary">LIVE</span>
+                        </a>
+                      );
+                    }
+                    return (
+                      <NavLink
+                        key={item.to}
+                        to={item.to}
+                        end={item.to === "/"}
+                        onClick={() => setMobileOpen(false)}
+                        className={({ isActive }) =>
+                          `flex items-center gap-3 rounded-lg px-3 py-2.5 text-base font-medium transition-colors ${
+                            isActive ? "bg-primary/10 text-primary" : "text-muted-foreground hover:bg-muted hover:text-foreground"
+                          }`
+                        }
+                      >
+                        <item.icon className="h-5 w-5" />
+                        {item.label}
+                      </NavLink>
+                    );
+                  })}
                 </nav>
                 <div className="mt-6">
                   <Button asChild variant="discord" className="w-full" onClick={() => setMobileOpen(false)}>
