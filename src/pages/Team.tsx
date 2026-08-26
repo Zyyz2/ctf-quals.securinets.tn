@@ -82,7 +82,7 @@ const MEMBERS = [
     photo: team11,
     name: "Ayham Naily",
     role: "Web Exploitation",
-    discord: "d3dn0va",
+    discord: "d3dn0v4",
     links: [
       { href: "https://d3dn0v4.github.io", label: "blog", icon: Globe },
       { href: "https://www.linkedin.com/in/ayham-naili", label: "LinkedIn", icon: Linkedin },
