@@ -13,7 +13,7 @@ import team10 from "@/assets/charfeddine.webp";
 import team13 from "@/assets/malek-tabbabi.webp";
 import team14 from "@/assets/ouachani.webp";
 import team15 from "@/assets/graba.webp";
-import team16 from "@/assets/ad3m.webp";
+import team16 from "@/assets/adem-marzouki.jpg";
 
 import Reveal from "@/components/Reveal";
 import { Globe, Github, Linkedin, Youtube } from "lucide-react";
