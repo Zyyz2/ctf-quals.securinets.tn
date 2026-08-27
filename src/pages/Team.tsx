@@ -86,7 +86,7 @@ const MEMBERS = [
     photo: team16,
     name: "Adem Marzouki",
     role: "Reverse Engineering",
-    discord: "",
+    discord: "AD3M",
     links: [
       { href: "https://ad3m.tech", label: "blog", icon: Globe },
       { href: "https://www.linkedin.com/in/-0xad3m-/", label: "LinkedIn", icon: Linkedin },

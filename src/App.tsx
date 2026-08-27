@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Categories from "./pages/Categories";
 import Schedule from "./pages/Schedule";
+import Events from "./pages/Events";
 import Gallery from "./pages/Gallery";
 import Scoreboard from "./pages/Scoreboard";
 import Podium from "./pages/Podium";
@@ -32,6 +33,7 @@ const App = () => (
               <Route path="/" element={<Index />} />
               <Route path="/categories" element={<Categories />} />
               <Route path="/schedule" element={<Schedule />} />
+              <Route path="/events" element={<Events />} />
               <Route path="/gallery" element={<Gallery />} />
               <Route path="/scoreboard" element={<Scoreboard />} />
               <Route path="/podium" element={<Podium />} />

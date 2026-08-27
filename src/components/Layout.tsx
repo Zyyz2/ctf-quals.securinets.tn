@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import ThemeToggle from "@/components/ThemeToggle";
 import { DiscordIcon, XIcon } from "@/components/icons";
-import { ArrowUp, BarChart3, CalendarDays, ChevronRight, Facebook, Home, Images, Instagram, Linkedin, LayoutGrid, Mail, Menu, Trophy, Users } from "lucide-react";
+import { ArrowUp, BarChart3, CalendarDays, ChevronRight, Facebook, Home, Images, Instagram, Linkedin, LayoutGrid, Mail, Menu, Trophy, Users, CalendarPlus } from "lucide-react";
 
 const ctftimeLink = "https://ctftime.org/event/3364";
 const discordInvite = "https://discord.gg/Xqj6WnNmbQ";
@@ -13,6 +13,7 @@ const NAV = [
   { to: "/", label: "Home", icon: Home },
   { to: "/categories", label: "Categories", icon: LayoutGrid },
   { to: "/schedule", label: "Schedule", icon: CalendarDays },
+  { to: "/events", label: "Events", icon: CalendarPlus },
   { to: "/scoreboard", label: "Scoreboard", icon: BarChart3 },
   { to: "/podium", label: "Last Podium", icon: Trophy },
   { to: "/gallery", label: "Gallery", icon: Images },
