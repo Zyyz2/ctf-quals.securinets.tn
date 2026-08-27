@@ -44,13 +44,23 @@ const MEMBERS = [
   {
     photo: team2,
     name: "Jihed Kdiss",
-    role: "Reverse Engineering & Mobile",
+    role: "Mobile",
     discord: "ji0",
     links: [
       { href: "https://jihedkdiss.tn/", label: "website", icon: Globe },
       { href: "https://x.com/0xjio_", label: "Twitter/X", icon: XIcon },
       { href: "https://github.com/jihedkdiss", label: "GitHub", icon: Github },
       { href: "https://linkedin.com/in/jihedkdiss", label: "LinkedIn", icon: Linkedin },
+    ],
+  },
+  {
+    photo: team14,
+    name: "Mohamed Ali Ouachani",
+    role: "Mobile",
+    discord: "Ir0nbyte",
+    links: [
+      { href: "https://www.youtube.com/@ir0nbyte", label: "YouTube", icon: Youtube },
+      { href: "https://www.linkedin.com/in/med-ali-wachani/", label: "LinkedIn", icon: Linkedin },
     ],
   },
   {
@@ -157,16 +167,6 @@ const MEMBERS = [
     role: "Cryptography",
     discord: "SSonede",
     links: [],
-  },
-  {
-    photo: team14,
-    name: "Mohamed Ali Ouachani",
-    role: "Mobile",
-    discord: "Ir0nbyte",
-    links: [
-      { href: "https://www.youtube.com/@ir0nbyte", label: "YouTube", icon: Youtube },
-      { href: "https://www.linkedin.com/in/med-ali-wachani/", label: "LinkedIn", icon: Linkedin },
-    ],
   },
 ];
 
