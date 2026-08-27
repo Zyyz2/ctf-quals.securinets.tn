@@ -13,6 +13,7 @@ import team10 from "@/assets/charfeddine.webp";
 import team13 from "@/assets/malek-tabbabi.webp";
 import team14 from "@/assets/ouachani.webp";
 import team15 from "@/assets/graba.webp";
+import team16 from "@/assets/ad3m.webp";
 
 import Reveal from "@/components/Reveal";
 import { Globe, Github, Linkedin, Youtube } from "lucide-react";
@@ -69,6 +70,16 @@ const MEMBERS = [
     links: [
       { href: "https://www.linkedin.com/in/mohamed-gharbi-a4196b325", label: "LinkedIn", icon: Linkedin },
       { href: "https://github.com/hamagharbi", label: "GitHub", icon: Github },
+    ],
+  },
+  {
+    photo: team16,
+    name: "Adem Marzouki",
+    role: "Reverse Engineering",
+    discord: "",
+    links: [
+      { href: "https://ad3m.tech", label: "blog", icon: Globe },
+      { href: "https://www.linkedin.com/in/-0xad3m-/", label: "LinkedIn", icon: Linkedin },
     ],
   },
   {
