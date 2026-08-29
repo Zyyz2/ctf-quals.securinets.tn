@@ -182,7 +182,7 @@ const Layout = () => {
 
         <footer className="border-t border-border">
           <div className="container mx-auto px-4 pb-6 pt-6 text-center text-sm text-muted-foreground">
-            <div>© {new Date().getFullYear()} Securinets INSAT · Made by Zyyz</div>
+            <div>© {new Date().getFullYear()} Securinets INSAT · Made by Mohamed Aziz Rahmouni</div>
           </div>
         </footer>
       </div>
